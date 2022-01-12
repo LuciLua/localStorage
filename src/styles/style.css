@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300&family=Open+Sans:wght@300;400&display=swap');
+
+*::before,
+*,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1a1a1a;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  position: relative;
+
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  font-family: 'Lexend', sans-serif;
+}
+
+
+.content > h1{
+    color: #fff;
+}
+
+.content > a{
+    color: #fff;
+    background-color: #1a1a1aaf;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+
+    border-radius: 6px;
+}
+
+.content > img {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+
+  z-index: -1;
+}
+
+.content > form {
+  z-index: 10;
+
+  background-color: #bde2f54b;
+  color: #fff;
+  backdrop-filter: blur(5px);
+
+  border-radius: 0 6px 6px 6px;  
+}
+
+form{
+    width: 380px;
+    max-width: 90%;
+    height: 400px;
+  
+    padding: 15px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+}
+
+form > h1{
+    font-size: 13px;
+    color: #fff;
+    font-weight: 100;
+    position: absolute;
+    top: -16.3px;
+    left: 0;
+
+    background-color: #bde2f54b;
+    color: #fff;
+    backdrop-filter: blur(5px);
+  
+    border-radius: 6px 6px 0 0px;
+
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+
+    z-index: 15;
+}
+
+form .inputArea{
+    margin: 5px;
+    height: 40px;
+    width: 220px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+form .inputArea label{
+    position: absolute;
+    color: rgba(255, 255, 255, 0.467);
+    font-weight: 300;
+    font-size: 16px;
+
+    height: 20px;
+    width: 100%;
+    top: 17px;
+
+    pointer-events: none;
+    user-select: none;
+
+    transition: 0.1s;
+    
+}
+
+form .inputArea input{
+    border: none;
+    background: none;
+    height: 20px;
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
+
+    border-bottom: rgba(151, 151, 151, 0.152) 3px solid;
+    outline: none;
+    color: #fff;
+}
+
+form .inputArea label::before{
+    content: '';
+    width: 220px;
+    height: 3px;
+
+    background-color: rgb(179, 210, 238);
+    position: absolute;
+
+    right: 220px;
+    bottom: -20px;
+
+    transition: 0.1s;
+}
+
+form .inputArea input + label::before,
+form .inputArea input + label::before{
+top: 17px;
+
+}
+
+form .inputArea input:valid + label::before,
+form .inputArea input:focus + label::before{
+    right: 0;
+    top: 37px;
+    transition: 0.1s;
+}
+
+form .inputArea input:valid + label,
+form .inputArea input:focus + label{
+    top: 0;
+    transition: 0.1s;
+    color: rgb(179, 210, 238);
+    font-size: 12px;
+    font-weight: 300;
+
+}
+
+form button{
+    border-radius: 5px;
+    border: none;
+
+    font-family: 'Lexend', sans-serif;
+    cursor: pointer;
+
+}
+
+form button:nth-of-type(1){
+    padding: 10px 35px;
+    background-color: #1a1a1a72;
+    color: #fff;
+    margin-top: 40px;
+}
+
+form button:nth-of-type(2){
+    background-color: transparent;
+    color: #fff;
+    text-decoration: underline;
+    margin-top: 20px;
+}
+
+form button:nth-of-type(2) a{
+    color: #fff;
+}
+
+
+form button:nth-of-type(1):hover{
+    background-color: #1a1a1aaf;
+}
+
+form button:nth-of-type(2):hover a{
+    color: rgb(218, 235, 255);
+}
