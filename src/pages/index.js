@@ -32,7 +32,9 @@ function Home() {
             <div className={"content"}>
                 <img src="/background.jpg" alt="" />
                 <form id="formLogin">
+                    <div className={"formLabel"}>
                     <h1>Login</h1>
+                    </div>
                     <div className={"inputArea"}>
                         <input type="text" id="email" required autoComplete="off" />
                         <label htmlFor="email">Email</label>

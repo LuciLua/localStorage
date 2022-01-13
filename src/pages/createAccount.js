@@ -61,7 +61,9 @@ function CreateAccount() {
             <div className={"content"}>
                 <img src="/background.jpg" alt="" />
                 <form autoComplete="off">
+                <div className={"formLabel"}>
                     <h1>Create a Account</h1>
+                </div>
                     <div className={"inputArea"}>
                         <input type="text" id="email" name="email" required onChange={addEmail} />
                         <label htmlFor="email">Email</label>
