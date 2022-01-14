@@ -10,7 +10,7 @@
 
 ## 🛠 Technologies used
 
-<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"> 
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" > <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" >
 
 
 ## 🚀 How to start
@@ -25,9 +25,21 @@ git clone https://github.com/LuciLua/localStorage.git
 cd ./localStorage
 ```
 
+> install all packages using npm or yarn manager (using YARN)
+
+```bash
+yarn
+```
+
+> start the development server (using YARN)
+
+```bash
+yarn dev
+```
+
 ## 🖼 Preview
 
-**So far, this is the preview**
+So far, this is the preview, but you can check it out at [this updated link](https://local-storage-azure.vercel.app//)
 
 <img src="./login.png"/>
 <img src="./sign.png"/>
