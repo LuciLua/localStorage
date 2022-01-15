@@ -12,9 +12,6 @@ function Home() {
       const emailInput = document.getElementById("email");
       const passwordInput = document.getElementById("password");
 
-      console.log(emailInput.value);
-      console.log(passwordInput.value);
-
       if (emailInput.value === email && passwordInput.value === password) {
         window.location.href = "/secret";
       } else {

@@ -40,20 +40,6 @@ body {
   z-index: 1;
 }
 
-.content > h1 {
-  color: #fff;
-}
-
-.content > a {
-  color: #fff;
-  background-color: #1a1a1aaf;
-  text-decoration: none;
-  padding: 10px 15px;
-  margin-top: 10px;
-
-  border-radius: 6px;
-}
-
 .content > img {
   position: absolute;
   width: 100%;
@@ -220,4 +206,53 @@ form button:nth-of-type(1):hover {
 
 form button:nth-of-type(2):hover a {
   color: rgb(218, 235, 255);
+}
+
+.secretSection {
+
+  background-color: #bde2f54b;
+  color: #fff;
+  backdrop-filter: blur(5px);
+
+  border-radius: 0 6px 6px 6px;
+
+  padding: 10px 15px;
+
+  width: 400px;
+  height: 300px;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.secretSection > h1 {
+  color: #fff;
+}
+
+.secretSection > a {
+  color: #fff;
+  background-color: #1a1a1aaf;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+
+  border-radius: 6px;
+}
+
+.userImg{
+  overflow: hidden;
+  margin: auto;
+  border: 1px solid rgb(220, 220, 220);
+
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.33);
+
+  width: 150px;
+  height: 150px;
+  border-radius: 60%;
+
+  position: relative;
 }

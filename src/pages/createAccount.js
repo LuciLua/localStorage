@@ -7,6 +7,7 @@ function CreateAccount() {
   const [emailConfirm, setEmailConfirm] = useState();
   const [password, setPassword] = useState();
   const [passwordConfirm, setPasswordConfirm] = useState();
+  const [userImage, setImage] = useState();
 
   function addEmail(e) {
     setEmail(e.target.value);
@@ -19,6 +20,9 @@ function CreateAccount() {
   }
   function addEmailConfirm(e) {
     setEmailConfirm(e.target.value);
+  }
+  function addImage(e) {
+    setImage(e.target.value);
   }
 
   function validarDados() {
@@ -43,6 +47,7 @@ function CreateAccount() {
 
       if (validos > 1) {
         alert("Cadastro realizado com sucesso!");
+        loginLocal.setItem("@luciLua-userImage", `${userImage}`)
         window.location.href = "/";
       }
     }
@@ -105,16 +110,23 @@ function CreateAccount() {
             />
             <label htmlFor="passwordConfirm">Password again</label>
           </div>
+          <div className={"inputArea"}>
+            <input
+              type="text"
+              id="userImage"
+              name="userImage"
+              onChange={addImage}
+              required
+              autoComplete="off"
+            />
+            <label htmlFor="userImage">Your Photo (link Pinterest or twitter)</label>
+          </div>
           <button
             type="submit"
             id="submitSign"
             onClick={(e) => {
               e.preventDefault();
               validarDados();
-              console.log("email:", email);
-              console.log("email conmfirm:", emailConfirm);
-              console.log("password:", password);
-              console.log("password Confirm:", passwordConfirm);
             }}
           >
             SignIn
