@@ -8,11 +8,18 @@
   "scripts": {
     "dev": "next",
     "start": "next start",
-    "build": "next build"
+    "build": "next build",
+    "lint": "prettier --write src",
+    "check": "prettier --check src"
   },
   "dependencies": {
     "next": "^12.0.8",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "eslint": "8.6.0",
+    "eslint-config-next": "12.0.8",
+    "prettier": "^2.5.1"
   }
 }
