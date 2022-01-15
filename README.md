@@ -37,6 +37,20 @@ yarn
 yarn dev
 ```
 
+## 👥 Making code concise if you make changes
+
+> check if there is anything to change
+
+```bash
+yarn lint
+```
+
+> still using prettier, have it format the code automatically
+
+```bash
+yarn format
+```
+
 ## 🖼 Preview
 
 So far, this is the preview, but you can check it out at [this updated link](https://local-storage-azure.vercel.app//)
