@@ -34,6 +34,8 @@ body {
   flex-direction: column;
 
   font-family: "Lexend", sans-serif;
+
+  user-select: none;
 }
 
 .content > * {
@@ -182,34 +184,55 @@ form button {
   cursor: pointer;
 }
 
-form button:nth-of-type(1) {
+form button.btnPrimary {
+  background-color: transparent;
+  margin-right: -105px;
+}
+form button.btnPrimary a {
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-start;
+
+  font-size: 11px;
+
+  color: rgba(255, 255, 255, 0.337);
+}
+
+form button.btnPrimary a:hover{
+  color: rgba(255, 255, 255, 0.466);
+}
+
+form button.btnMain{
   padding: 10px 35px;
   background-color: #1a1a1a72;
   color: #fff;
   margin-top: 40px;
 }
 
-form button:nth-of-type(2) {
-  background-color: transparent;
+form button.btnMain a{
   color: #fff;
-  text-decoration: underline;
-  margin-top: 20px;
+  text-decoration: none;
 }
 
-form button:nth-of-type(2) a {
-  color: #fff;
-}
-
-form button:nth-of-type(1):hover {
+form button.btnMain:hover{
   background-color: #1a1a1aaf;
 }
 
-form button:nth-of-type(2):hover a {
+form button.btnSecondary {
+  background-color: transparent;
+  color: #fff;
+  margin-top: 20px;
+}
+
+form button.btnSecondary a {
+  color: #fff;
+}
+
+form button.btnSecondary:hover a {
   color: rgb(218, 235, 255);
 }
 
 .secretSection {
-
   background-color: #bde2f54b;
   color: #fff;
   backdrop-filter: blur(5px);
@@ -243,7 +266,7 @@ form button:nth-of-type(2):hover a {
   border-radius: 6px;
 }
 
-.userImg{
+.userImg {
   overflow: hidden;
   margin: auto;
   border: 1px solid rgb(220, 220, 220);

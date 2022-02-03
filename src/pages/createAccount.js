@@ -122,6 +122,7 @@ function CreateAccount() {
             <label htmlFor="userImage">Your Photo (link Pinterest or twitter)</label>
           </div>
           <button
+          className="btnMain"
             type="submit"
             id="submitSign"
             onClick={(e) => {
@@ -131,7 +132,7 @@ function CreateAccount() {
           >
             SignIn
           </button>
-          <button>
+          <button className="btnSecondary">
             <Link href="/">
               <a>Already have a account.</a>
             </Link>

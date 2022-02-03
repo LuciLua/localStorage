@@ -41,6 +41,8 @@ function Secret(props) {
         setImageURL(imageInsert)
     }, [])
 
+    // https://nextjs.org/docs/messages/react-hydration-error
+
 
     // const { userName, imageUrl } = props
 

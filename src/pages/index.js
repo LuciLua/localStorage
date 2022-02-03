@@ -41,9 +41,15 @@ function Home() {
             <input type="password" id="password" required />
             <label htmlFor="password">Password</label>
           </div>
+          <button className="btnPrimary">
+            <Link href="/rememberMe">
+              <a>I forgot my password</a>
+            </Link>
+          </button>
           <button
             type="submit"
             id="submitButton"
+            className="btnMain"
             onClick={(e) => {
               e.preventDefault();
               validarLogin();
@@ -51,7 +57,7 @@ function Home() {
           >
             Login
           </button>
-          <button>
+          <button className="btnSecondary">
             <Link href="/createAccount">
               <a>Create a account</a>
             </Link>
