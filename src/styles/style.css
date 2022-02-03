@@ -36,6 +36,7 @@ body {
   font-family: "Lexend", sans-serif;
 
   user-select: none;
+
 }
 
 .content > * {
@@ -243,6 +244,7 @@ form button.btnSecondary:hover a {
 
   width: 400px;
   height: 300px;
+  max-height: fit-content;
 
   position: relative;
 

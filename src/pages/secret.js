@@ -2,41 +2,49 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from 'react'
 
-
-// export async function getStaticProps() {
-
-//     const imageUrl = '/background.jpg'
-
-//     return {
-//         props: {
-//             imageUrl,
-//             userName
-//         }
-//     }
-// }
+import styles from '../styles/secret.module.css'
 
 function Secret(props) {
 
     var userNameInsert = ''
     var imageInsert = ''
+    var msgInsert = ''
 
     if (typeof window !== "undefined") {
 
         const loginLocal = localStorage;
         const emailLocal = loginLocal.getItem("@luciLua-email");
         const userImageLocal = loginLocal.getItem("@luciLua-userImage");
+
+        const msgLocal = loginLocal.getItem("@luciLua-msg");
+        console.log(msgLocal)
+        msgInsert = msgLocal
+
         imageInsert = userImageLocal
 
         // get userName: tudo antes do @
         const arrobaPosition = emailLocal.indexOf("@")
         const user = emailLocal.substring(0, arrobaPosition)
         userNameInsert = user
+
     }
 
+    const [msg, setMsg] = useState('')
     const [userName, setUserName] = useState('User')
     const [imageURL, setImageURL] = useState('/background.jpg')
 
-    useEffect( () => {
+    function addMsg(e) {
+        setMsg(e.target.value)
+        console.log(msg)
+
+        if (typeof window !== "undefined") {
+            const loginLocal = localStorage;
+            loginLocal.setItem("@luciLua-msg", msg);
+        }
+    }
+
+    useEffect(() => {
+        setMsg(msgInsert)
         setUserName(userNameInsert)
         setImageURL(imageInsert)
     }, [])
@@ -58,15 +66,24 @@ function Secret(props) {
                 />
                 <div className="secretSection">
                     <h1>{userName}</h1>
-                    <div className="userImg">
-                        <Image
-                            priority
-                            src={imageURL}
-                            // src="https://pbs.twimg.com/profile_images/1356824377694834689/c8dg1cHW_400x400.jpg"
-                            layout="fill"
-                            objectFit="cover"
-                            alt="userImage"
-                        />
+                    <div className={styles.readmeProfile}>
+                        <div className="userImg">
+                            <Image
+                                priority
+                                src={imageURL}
+                                layout="fill"
+                                objectFit="cover"
+                                alt="userImage"
+                            />
+                        </div>
+                        <div>
+                            <span>Salve uma mensagem aqui!</span>
+                            <textarea
+                                onChange={addMsg}
+                                value={msg}
+                                className={styles.aboutYou}
+                                type='text' />
+                        </div>
                     </div>
                     <Link href="/">
                         <a>Back to start</a>

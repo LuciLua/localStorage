@@ -38,10 +38,12 @@ function Home() {
             <label htmlFor="email">Email</label>
           </div>
           <div className={"inputArea"}>
-            <input type="password" id="password" required />
+            <input type="password" id="password" autoComplete="current-password" required />
             <label htmlFor="password">Password</label>
           </div>
-          <button className="btnPrimary">
+          <button
+            className="btnPrimary"
+            type="button">
             <Link href="/rememberMe">
               <a>I forgot my password</a>
             </Link>
@@ -57,7 +59,9 @@ function Home() {
           >
             Login
           </button>
-          <button className="btnSecondary">
+          <button
+          type="button" 
+          className="btnSecondary">
             <Link href="/createAccount">
               <a>Create a account</a>
             </Link>
