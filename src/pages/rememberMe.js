@@ -1,10 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function rememberMe() {
-    if (typeof window !== "undefined") {
-        const loginLocal = localStorage;
+
+    function emailGet() {
+        if (typeof window !== 'undefined') {
+            const emailLocal = localStorage.getItem('@luciLua-email')
+            return emailLocal
+        }
+    }
+
+    function passGet() {
+        if (typeof window !== 'undefined') {
+            const passLocal = localStorage.getItem('@luciLua-password')
+            return passLocal
+        }
     }
 
     return (
@@ -25,8 +36,8 @@ function rememberMe() {
                             type="text"
                             id="email"
                             name="email"
-                            required
-                            value={localStorage.getItem('@luciLua-email')}
+                            readOnly
+                            value={emailGet()}
                         />
                         <label htmlFor="email">Email</label>
                     </div>
@@ -35,8 +46,8 @@ function rememberMe() {
                             type="text"
                             id="password"
                             name="password"
-                            required
-                            value={localStorage.getItem('@luciLua-password')}
+                            readOnly
+                            value={passGet()}
                         />
                         <label htmlFor="password">Password</label>
                     </div>
